@@ -1,0 +1,37 @@
+/* Nền động gradient */
+body {
+  background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Chữ phát sáng */
+h1 {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #fff, 0 0 20px #ff99cc, 0 0 30px #ff6699; }
+  to   { text-shadow: 0 0 20px #fff, 0 0 30px #ffccff, 0 0 40px #ff99cc; }
+}
+
+/* Hoa rơi */
+.petal {
+  position: fixed;
+  top: -10px;
+  font-size: 22px;
+  animation: fall 10s linear infinite;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+@keyframes fall {
+  0%   { transform: translateY(0) rotate(0deg); }
+  100% { transform: translateY(100vh) rotate(360deg); }
+}
